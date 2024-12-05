@@ -30,7 +30,8 @@ This Helm chart deploys a sample application consisting of a frontend, backend, 
 
 - Familiarity with Kubernetes networking concepts, including:
   -ClusterIP: a virtual IP address that allows access to a service within the cluster
-  \* Sample YAML for ClusterIP
+
+  # Sample YAML for ClusterIP
 ```
    apiVersion: v1
   kind: Service
@@ -45,7 +46,8 @@ This Helm chart deploys a sample application consisting of a frontend, backend, 
         env: demo
 ```
 - NodePort: a port that allows access to a service from outside the cluster
-  \*Sample YAML for Nodeport
+
+  # Sample YAML for Nodeport
 ```
   apiVersion: v1
   kind: Service
