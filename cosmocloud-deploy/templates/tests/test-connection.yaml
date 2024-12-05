@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "testapp-test-connection"
+  labels:
+    app: cosmocloud-deploy
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ["wget"]
+      args: ["testapp:8000"]
+  restartPolicy: Never
