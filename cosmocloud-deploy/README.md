@@ -31,7 +31,8 @@ This Helm chart deploys a sample application consisting of a frontend, backend, 
 - Familiarity with Kubernetes networking concepts, including:
   -ClusterIP: a virtual IP address that allows access to a service within the cluster
   \* Sample YAML for ClusterIP
-  apiVersion: v1
+```
+   apiVersion: v1
   kind: Service
   metadata:
     name: cluster-svc
@@ -42,10 +43,10 @@ This Helm chart deploys a sample application consisting of a frontend, backend, 
       - port: 80
     selector:
         env: demo
-
+```
 - NodePort: a port that allows access to a service from outside the cluster
   \*Sample YAML for Nodeport
-
+```
   apiVersion: v1
   kind: Service
   metadata:
@@ -61,7 +62,7 @@ This Helm chart deploys a sample application consisting of a frontend, backend, 
       targetPort: 80
     selector:
       env: demo
-
+```
 - Knowledge of how to create a ConfigMap in Kubernetes, including:
   - Creating a ConfigMap from a file or literal value
   - Using a ConfigMap to store application configuration data
@@ -71,7 +72,7 @@ This Helm chart deploys a sample application consisting of a frontend, backend, 
 1. Clone this repository to your machine.
 2. Run `helm install testapp .` to install the chart.
 3. Verify that the deployments are deployed with `kubectl get deployments`.
-   4.Verify that the pods are running with `kubectl get pods`.
+4. Verify that the pods are running with `kubectl get pods`.
 
 ## Usage
 
